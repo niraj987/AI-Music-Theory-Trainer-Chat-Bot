@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Music Theory Trainer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>AI Music Theory Trainer</h2>
+            <p>Ask me anything about music theory!</p>
+        </div>
+        <div class="chat-box" id="chatBox">
+            <div class="message bot">Hi! I'm your AI Music Theory Trainer. I can teach you about notes, scales, chords, and more with visuals and sound. What would you like to learn?</div>
+        </div>
+        <div class="media-area">
+            <canvas id="musicCanvas" width="400" height="150"></canvas>
+            <button id="playButton" onclick="playCurrentSound()" disabled>Play Sound</button>
+        </div>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="e.g., 'What is a C Major chord?'">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+        <div class="suggestions">
+            <button onclick="suggest('What are musical notes?')">Notes</button>
+            <button onclick="suggest('What is a C Major scale?')">Scales</button>
+            <button onclick="suggest('What is a C Major chord?')">Chords</button>
+            <button onclick="suggest('What are intervals?')">Intervals</button>
+        </div>
+        <div class="history">
+            <h3>Search History</h3>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+    <script src="https://unpkg.com/tone@14.7.77/build/Tone.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
